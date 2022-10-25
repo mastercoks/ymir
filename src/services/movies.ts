@@ -7,7 +7,7 @@ const apiMovies = axios.create({
 });
 
 apiMovies.interceptors.response.use(
-  (config) => config,
+  (response) => response.data?.data,
   (error) => {
     const data = error.response;
     return Promise.reject(new Error(data?.status_message ?? "Erro"));

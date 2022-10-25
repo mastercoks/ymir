@@ -1,2 +1,1 @@
-export * from "./apiMovies";
-export * from "./useMovies";
+export * from "./movies";
